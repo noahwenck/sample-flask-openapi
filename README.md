@@ -1,4 +1,4 @@
-# Sample Flask API with OPENAPI Spec
+# Sample Flask API with OpenAPI Spec
 
 Simple Flask API with OpenAPI Spec for self-reference, and to provide a sample for anyone who finds this and needs it.
 
