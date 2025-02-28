@@ -1,0 +1,53 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample Flask OpenAPI",
+    "description": "A sample API for demonstrating OpenAPI with Flask",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/ping": {
+      "get": {
+        "summary": "Pong!",
+        "responses": {
+          "200": {
+            "description": "Confirmation of ping.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/{name}/{age}": {
+      "get": {
+        "summary": "See your name and age",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "age",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+            "200": {
+                "description": "Returns a greeting with name and age.",
+                "schema": {
+                "type": "string"
+                }
+            }
+        }
+      }
+    }
+  }
+}
